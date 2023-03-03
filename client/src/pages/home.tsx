@@ -1,10 +1,10 @@
-import { useList } from '@pankod/refine-core';
+//import { useList } from '@pankod/refine-core';
 import { Box, Typography, Stack } from '@pankod/refine-mui';
 import { 
 PieChart,
-PropertyCard,
+//PropertyCard,
 PropertyReferrals,
-TopAgent,
+//TopAgent,
 TotalRevenue,
  } from 'components';
 
@@ -20,7 +20,7 @@ const home = () => {
         <PieChart title="Total Customers" value={5684} series={[75, 25]} colors={['#275be8', '#c4e8ef']}/>
         <PieChart title="Total Cities" value={555} series={[75, 25]} colors={['#475be8', '#e4e8ef']}/>
       </Box>
-      <Stack mt="25px" width="100%" direction={{xs: 'column', lg: 'row'}}>
+      <Stack mt="25px" width="100%" direction={{xs: 'column', lg: 'row'}} gap={4}>
         <TotalRevenue />
         <PropertyReferrals />
       </Stack>
