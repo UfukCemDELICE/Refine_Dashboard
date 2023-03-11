@@ -1,10 +1,10 @@
-//import { useList } from '@pankod/refine-core';
+import { useList } from '@pankod/refine-core';
 import { Box, Typography, Stack } from '@pankod/refine-mui';
 import { 
 PieChart,
-//PropertyCard,
+PropertyCard,
 PropertyReferrals,
-//TopAgent,
+TopAgent,
 TotalRevenue,
  } from 'components';
 
