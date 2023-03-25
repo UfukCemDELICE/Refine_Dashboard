@@ -32,7 +32,15 @@ const getAllProperties = async (req, res) => {
     res.status(500).json({message: err.message})
   }
 };
-const getPropertyDetail = async (req, res) => {};
+const getPropertyDetail = async (req, res) => {
+  const { id } = req.params;
+  const propertyExists = await Property.findOne({_id: id}).populate("creator");
+  if(propertyExists){
+    res.status(200).json(propertyExists);
+  } else {
+    res.status(404).json({message: "Property not found"})
+  }
+};
 
 const createProperty = async (req, res) => {
   try{
@@ -62,7 +70,15 @@ const createProperty = async (req, res) => {
 };
 
 const updateProperty = async (req, res) => {};
-const deleteProperty = async (req, res) => {};
+const deleteProperty = async (req, res) => {
+  try{
+    const { id } = req.params;
+    const propertyToDelete = await Property.findById({_id: id}).populate("creator");
+    
+  }catch(error){
+
+  }
+};
 
 export {
   getAllProperties,
