@@ -24,8 +24,8 @@ const AllProperty = () => {
   const currentPrice = sorter.find((item) => item.field === "price")?.order;
 
   const toggleSort = (field: string) => {
-      setSorter([{ field, order: currentPrice === "asc" ? "desc" : "asc" }]);
-  };
+    setSorter([{ field, order: currentPrice === "asc" ? "desc" : "asc" }]);
+};
 
   const currentFilterValues = useMemo(() => {
       const logicalFilters = filters.flatMap((item) =>
@@ -69,13 +69,13 @@ const AllProperty = () => {
                           mb={{ xs: "20px", sm: 0 }}
                       >
                           <CustomButton
-                              title={`Sort price ${
-                                  currentPrice === "asc" ? "↑" : "↓"
-                              }`}
-                              handleClick={() => toggleSort("price")}
-                              backgroundColor="#475be8"
-                              color="#fcfcfc"
-                          />
+                                title={`Sort price ${
+                                    currentPrice === "asc" ? "↑" : "↓"
+                                }`}
+                                handleClick={() => toggleSort("price")}
+                                backgroundColor="#475be8"
+                                color="#fcfcfc"
+                            />
                           <TextField
                               variant="outlined"
                               color="info"
